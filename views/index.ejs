@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form action="/generate-password" method="get">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" name="length" min="8" max="64" required>
+            <button type="submit">Generate</button>
+        </form>
+
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+    </div>
+</body>
+</html>
